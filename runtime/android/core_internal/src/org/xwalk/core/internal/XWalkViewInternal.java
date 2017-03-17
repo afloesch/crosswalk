@@ -1278,8 +1278,6 @@ public class XWalkViewInternal extends android.widget.FrameLayout {
     }
 
     private static void checkThreadSafety() {
-        return;
-        
         if (Looper.myLooper() != Looper.getMainLooper()) {
             Throwable throwable = new Throwable(
                 "Warning: A XWalkViewInternal method was called on thread '" +
