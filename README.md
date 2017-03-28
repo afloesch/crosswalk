@@ -59,12 +59,16 @@ This will open a text file. Add the following lines to the file and save it.
 ```sh
 import("//xwalk/build/android.gni")
 target_os = "android"
+is_debug = false
+enable_nacl = false
+is_component_build = false
 ```
 
 ### Build Crosswalk
 
 ```sh
-ninja -C out/Default xwalk_core_library
+cd ../src
+ninja -C src/out/Default xwalk xwalk_core_library
 ```
 
 ## Documents
